@@ -1,0 +1,60 @@
+name: render
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: render-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-and-render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Cache hyperframes
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: hyperframes-0.8.118
+      - name: Cache Puppeteer Chrome (saves ~1 min per run)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-chrome-0.8.118
+      - name: Cache FFmpeg static (ahorra ~15s por run)
+        id: ffmpeg-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/ffmpeg-static
+          key: ffmpeg-static-amd64
+      - name: Install HyperFrames (pinned)
+        run: npx --yes hyperframes@0.8.118 --version
+      - name: Install FFmpeg static (solo si no hay cache)
+        if: steps.ffmpeg-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/ffmpeg-static
+          curl -fsSL -o /tmp/ffmpeg.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+          tar -xf /tmp/ffmpeg.tar.xz -C /tmp
+          cp /tmp/ffmpeg-*-amd64-static/ffmpeg /tmp/ffmpeg-*-amd64-static/ffprobe ~/ffmpeg-static/
+      - name: FFmpeg al PATH
+        run: |
+          echo "$HOME/ffmpeg-static" >> "$GITHUB_PATH"
+          "$HOME/ffmpeg-static/ffmpeg" -version | head -1
+      - name: Lint (guardia rápida — el check completo corre local antes de subir)
+        run: npx --yes hyperframes@0.8.118 lint .
+      - name: Render MP4
+        run: npx --yes hyperframes@0.8.118 render . --skill=motion-graphics -q high --no-low-memory-mode --workers=auto
+        env:
+          PRODUCER_EXPERIMENTAL_FAST_CAPTURE: "true"
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: podcast-30s-mp4
+          path: renders/**
+
+
