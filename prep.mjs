@@ -20,7 +20,7 @@ const vf = [
   "colorbalance=rs=-0.03:bs=0.04",
   "scale=1080:1920:flags=lanczos",
   "unsharp=5:5:0.7",
-  "vignette=PI/4.5",
+  "vignette=PI/3.8",
 ].join(",");
 execFileSync("ffmpeg", ["-y", "-ss", String(cfg.segStart), "-t", String(dur), "-i", SRC,
   "-an", "-vf", vf, "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p",

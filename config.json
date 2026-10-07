@@ -2,22 +2,26 @@
   "segStart": 171,
   "segDur": 30,
   "cropX": 305,
-  "title": "ME QUEREN COMPETIR",
+  "title": "ME QUIEREN|COMPETIR",
   "hl": ["competir", "día", "10", "multiplicando"],
   "hl2": ["cabrón", "polémicas", "buenos"],
   "punches": [
     { "t": 4.4 },
     { "t": 10.0 },
-    { "t": 16.9 },
-    { "t": 24.3, "s": 1.18, "hold": 0.9 }
+    { "t": 13.45 },
+    { "t": 15.6 },
+    { "t": 19.6 },
+    { "t": 24.3, "s": 1.22, "hold": 0.9 }
   ],
   "pan": [[0, -12], [7.5, 6], [15, -6], [22.5, 10], [30, -8]],
   "cards": [
     { "t": 5.75, "dur": 0.62, "word": "UN VIDEO AL DÍA", "bg": "#0C0C0C", "fg": "#FFD700", "fs": 132 },
     { "t": 10.95, "dur": 0.5, "word": "10", "bg": "#FFD700", "fg": "#0C0C0C", "fs": 300 },
+    { "t": 11.95, "dur": 0.5, "word": "7", "bg": "#0C0C0C", "fg": "#FFD700", "fs": 300 },
+    { "t": 17.05, "dur": 0.5, "word": "3", "bg": "#7CFFB2", "fg": "#0C0C0C", "fs": 300 },
     { "t": 25.75, "dur": 0.62, "word": "MULTIPLICANDO", "bg": "#0C0C0C", "fg": "#7CFFB2", "fs": 112 }
   ],
   "broll": [],
-  "bass": [5.75, 24.3],
+  "bass": [5.75, 10.95, 24.3],
   "punchOrigin": "50% 40%"
 }

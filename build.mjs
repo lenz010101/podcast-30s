@@ -44,10 +44,13 @@ clips += `      <div id="stage" class="clip"><video id="vid" src="assets/vid/seg
   sfx += `      <audio id="sbr${i}" src="assets/sfx/whoosh.mp3" data-start="${b.t}" data-duration="0.51" data-volume="0.5"></audio>\n`;
 });
 
-// título fijo arriba (estilo ref)
+// título fijo arriba (estilo ref): dos líneas, fondo negro, línea 2 en oro
 if (cfg.title) {
-  clips += `      <div id="title">${esc(cfg.title)}</div>\n`;
-  tweens += `      tl.fromTo("#title", { opacity: 0, y: -24, scale: .8 }, { opacity: 1, y: 0, scale: 1, duration: .3, ease: "back.out(2)", immediateRender: false }, 0.12);\n`;
+  const lines = String(cfg.title).split("|");
+  const inner = lines.map((l, i) => `<div class="tl${i ? " l2" : ""}">${esc(l)}</div>`).join("");
+  clips += `      <div id="titleWrap"><div id="title">${inner}</div></div>\n`;
+  tweens += `      tl.fromTo("#title", { opacity: 0, y: -76, scale: .68, rotate: -3 }, { opacity: 1, y: 0, scale: 1, rotate: 0, duration: .45, ease: "back.out(2.4)", immediateRender: false }, 0.15);\n`;
+  sfx += `      <audio id="sti" src="assets/sfx/pop.mp3" data-start="0.15" data-duration="0.62" data-volume="0.55"></audio>\n`;
 }
 
 // ---- captions kinéticas ----
@@ -89,7 +92,7 @@ beats.forEach((b, i) => {
 
 // ---- punch-ins ----
 (cfg.punches ?? []).forEach((p, i) => {
-  const up = p.up ?? 0.3, hold = p.hold ?? 0.7, down = p.down ?? 0.5, s = p.s ?? 1.15;
+  const up = p.up ?? 0.25, hold = p.hold ?? 0.6, down = p.down ?? 0.45, s = p.s ?? 1.16;
   tweens += `      tl.to("#stage", { scale: ${s}, duration: ${up}, ease: "power2.out" }, ${p.t});\n`;
   tweens += `      tl.to("#stage", { scale: 1, duration: ${down}, ease: "power2.inOut" }, ${+(p.t + up + hold).toFixed(2)});\n`;
   sfx += `      <audio id="sp${i}" src="assets/sfx/pop.mp3" data-start="${p.t}" data-duration="0.62" data-volume="0.7"></audio>\n`;
@@ -121,9 +124,13 @@ const html = `<!doctype html>
       #vid { position: absolute; left: -8%; top: -8%; width: 116%; height: 116%;
         object-fit: cover; background: #000; will-change: transform; }
       .br { object-fit: cover; background: #000; }
-      #title { position: absolute; left: 0; top: 84px; width: 1080px; text-align: center;
-        font: 900 52px "Mont", sans-serif; color: #fff; letter-spacing: .5px;
-        text-shadow: 0 3px 14px rgba(0,0,0,.75), 0 0 3px rgba(0,0,0,.9); z-index: 5; }
+      #titleWrap { position: absolute; left: 0; top: 64px; width: 1080px; display: flex;
+        justify-content: center; z-index: 5; }
+      #title { background: #0C0C0C; padding: 16px 36px 22px; text-align: center;
+        will-change: transform, opacity; box-shadow: 0 10px 34px rgba(0,0,0,.55); }
+      .tl { font: 900 66px/1.04 "Mont", sans-serif; color: #fff; letter-spacing: .5px;
+        white-space: nowrap; text-shadow: none; }
+      .tl.l2 { color: #FFD700; }
       .group { position: absolute; left: 0; top: 1080px; width: 1080px; height: 460px;
         display: flex; align-items: center; justify-content: center; padding: 0 48px; }
       .ln { text-align: center; line-height: 1.14; color: #fff; font-family: "Mont", sans-serif;
