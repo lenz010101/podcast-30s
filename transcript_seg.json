@@ -1,387 +1,402 @@
 [
  {
+  "text": "No",
+  "start": 0.02,
+  "end": 0.18
+ },
+ {
+  "text": "mames,",
+  "start": 0.18,
+  "end": 0.82
+ },
+ {
   "text": "la",
-  "start": -0.12,
-  "end": 0.05
+  "start": 0.82,
+  "end": 1
  },
  {
   "text": "mayoría",
-  "start": 0.05,
-  "end": 0.73
+  "start": 1,
+  "end": 1.65
  },
  {
   "text": "de",
-  "start": 0.73,
-  "end": 0.92
+  "start": 1.65,
+  "end": 1.8
  },
  {
   "text": "sus",
-  "start": 0.92,
-  "end": 1.21
+  "start": 1.83,
+  "end": 2.11
  },
  {
   "text": "pinches",
-  "start": 1.21,
-  "end": 1.76
+  "start": 2.12,
+  "end": 2.68
  },
  {
   "text": "creadores",
-  "start": 1.9,
-  "end": 2.64
+  "start": 2.81,
+  "end": 3.25
  },
  {
   "text": "me",
-  "start": 2.77,
-  "end": 2.95
+  "start": 3.39,
+  "end": 3.44
  },
  {
   "text": "quieren",
-  "start": 2.95,
-  "end": 3.71
+  "start": 3.44,
+  "end": 3.74
  },
  {
   "text": "competir",
-  "start": 3.71,
-  "end": 4
+  "start": 3.74,
+  "end": 4.28
  },
  {
   "text": "a",
-  "start": 4,
-  "end": 4.07
+  "start": 4.28,
+  "end": 4.34
  },
  {
   "text": "mí",
-  "start": 4.15,
-  "end": 4.44
+  "start": 4.34,
+  "end": 4.5
  },
  {
   "text": "subiendo",
-  "start": 4.44,
-  "end": 5.03
+  "start": 4.5,
+  "end": 5.07
  },
  {
   "text": "un",
-  "start": 5.28,
-  "end": 5.68
+  "start": 5.18,
+  "end": 5.44
  },
  {
   "text": "video",
-  "start": 5.68,
+  "start": 5.44,
   "end": 6
  },
  {
   "text": "al",
-  "start": 6,
-  "end": 6.03
+  "start": 6.02,
+  "end": 6.18
  },
  {
   "text": "día",
-  "start": 6.03,
-  "end": 6.51
+  "start": 6.18,
+  "end": 6.45
  },
  {
   "text": "y",
-  "start": 6.51,
-  "end": 6.6
+  "start": 6.45,
+  "end": 6.52
  },
  {
   "text": "los",
-  "start": 6.6,
-  "end": 6.84
+  "start": 6.55,
+  "end": 6.81
  },
  {
   "text": "buenos,",
-  "start": 6.84,
-  "end": 7.33
+  "start": 6.81,
+  "end": 7.54
  },
  {
-  "text": "¿eh?",
-  "start": 7.33,
-  "end": 7.5
- },
- {
-  "text": "Los",
-  "start": 7.51,
-  "end": 7.74
+  "text": "los",
+  "start": 7.54,
+  "end": 7.8
  },
  {
   "text": "buenos",
-  "start": 7.74,
-  "end": 8.23
+  "start": 7.8,
+  "end": 8.35
  },
  {
-  "text": "suban",
-  "start": 8.23,
-  "end": 8.63
+  "text": "suben",
+  "start": 8.39,
+  "end": 8.68
  },
  {
   "text": "un",
-  "start": 8.63,
-  "end": 8.79
+  "start": 8.81,
+  "end": 8.99
  },
  {
   "text": "video",
-  "start": 8.79,
-  "end": 9.2
+  "start": 8.99,
+  "end": 9.45
  },
  {
   "text": "al",
-  "start": 9.2,
-  "end": 9.36
+  "start": 9.45,
+  "end": 9.63
  },
  {
   "text": "día.",
-  "start": 9.36,
-  "end": 9.86
+  "start": 9.63,
+  "end": 10.11
  },
  {
   "text": "Cabrón,",
-  "start": 9.86,
-  "end": 10.28
+  "start": 10.19,
+  "end": 10.76
  },
  {
-  "text": "ella",
-  "start": 10.38,
-  "end": 10.64
+  "text": "yo",
+  "start": 10.76,
+  "end": 10.91
+ },
+ {
+  "text": "ya",
+  "start": 10.91,
+  "end": 11.05
  },
  {
   "text": "subí",
-  "start": 10.67,
-  "end": 10.9
+  "start": 11.05,
+  "end": 11.36
  },
  {
   "text": "10",
-  "start": 10.9,
-  "end": 11.34
+  "start": 11.42,
+  "end": 11.88
  },
  {
   "text": "y",
-  "start": 11.34,
-  "end": 11.44
+  "start": 11.88,
+  "end": 12
  },
  {
-  "text": "a",
-  "start": 11.44,
-  "end": 11.54
+  "text": "ya",
+  "start": 12,
+  "end": 12.04
  },
  {
-  "text": "tu",
-  "start": 11.54,
-  "end": 11.73
- },
- {
-  "text": "de",
-  "start": 11.73,
-  "end": 11.94
+  "text": "tuve",
+  "start": 12.07,
+  "end": 12.42
  },
  {
   "text": "7",
-  "start": 11.94,
-  "end": 12.22
+  "start": 12.43,
+  "end": 12.71
  },
  {
   "text": "polémicas",
-  "start": 12.29,
-  "end": 13.2
+  "start": 12.71,
+  "end": 13.58
  },
  {
   "text": "en",
-  "start": 13.2,
-  "end": 13.44
+  "start": 13.58,
+  "end": 13.77
  },
  {
-  "text": "lunes,",
-  "start": 13.44,
-  "end": 14.15
+  "text": "lunes",
+  "start": 13.77,
+  "end": 14.24
  },
  {
   "text": "cabrón,",
-  "start": 14.15,
-  "end": 14.74
+  "start": 14.25,
+  "end": 15.01
  },
  {
   "text": "en",
-  "start": 14.74,
-  "end": 14.92
+  "start": 15.01,
+  "end": 15.2
  },
  {
   "text": "lunes.",
-  "start": 14.96,
-  "end": 15.57
+  "start": 15.2,
+  "end": 15.84
  },
  {
   "text": "Así",
-  "start": 15.59,
-  "end": 15.76
+  "start": 15.87,
+  "end": 15.94
  },
  {
   "text": "se",
-  "start": 15.76,
-  "end": 15.88
+  "start": 15.94,
+  "end": 16.01
  },
  {
-  "text": "despiertan.",
-  "start": 15.88,
-  "end": 16.7
+  "text": "despierta",
+  "start": 16.01,
+  "end": 16.32
+ },
+ {
+  "text": "mas.",
+  "start": 16.32,
+  "end": 16.66
  },
  {
   "text": "Tu",
-  "start": 16.7,
-  "end": 16.81
+  "start": 16.66,
+  "end": 16.75
  },
  {
   "text": "subes",
-  "start": 16.81,
-  "end": 17.06
+  "start": 16.75,
+  "end": 16.98
  },
  {
-  "text": "3",
-  "start": 17.09,
-  "end": 17.24
+  "text": "tres",
+  "start": 16.98,
+  "end": 17.15
  },
  {
   "text": "videos",
-  "start": 17.24,
+  "start": 17.16,
+  "end": 17.48
+ },
+ {
+  "text": "a",
+  "start": 17.5,
   "end": 17.57
  },
  {
-  "text": "a",
-  "start": 17.57,
-  "end": 17.62
- },
- {
   "text": "la",
-  "start": 17.62,
-  "end": 17.73
+  "start": 17.57,
+  "end": 17.75
  },
  {
   "text": "semana",
-  "start": 17.73,
-  "end": 18.06
+  "start": 17.75,
+  "end": 18.29
  },
  {
   "text": "y",
-  "start": 18.06,
-  "end": 18.11
+  "start": 18.29,
+  "end": 18.38
  },
  {
   "text": "quieres",
-  "start": 18.11,
-  "end": 18.34
+  "start": 18.38,
+  "end": 19.01
  },
  {
   "text": "competir,",
-  "start": 18.48,
-  "end": 19.22
+  "start": 19.01,
+  "end": 19.91
  },
  {
-  "text": "tu",
-  "start": 19.35,
-  "end": 19.5
- },
- {
-  "text": "es",
-  "start": 19.5,
-  "end": 19.76
- },
- {
-  "text": "no,",
-  "start": 19.76,
-  "end": 20.04
- },
- {
-  "text": "cabrón.",
-  "start": 20.04,
-  "end": 20.56
- },
- {
-  "text": "Compara",
-  "start": 20.57,
-  "end": 21.39
- },
- {
-  "text": "3",
-  "start": 21.45,
-  "end": 21.83
- },
- {
-  "text": "videos",
-  "start": 21.83,
-  "end": 22.6
- },
- {
-  "text": "a",
-  "start": 22.6,
-  "end": 22.72
- },
- {
-  "text": "la",
-  "start": 22.72,
-  "end": 22.97
- },
- {
-  "text": "semana.",
-  "start": 22.97,
-  "end": 24.16
- },
- {
-  "text": "Yo,",
-  "start": 24.16,
-  "end": 24.42
- },
- {
-  "text": "literalmente,",
-  "start": 24.42,
-  "end": 25.4
- },
- {
-  "text": "te",
-  "start": 25.4,
-  "end": 25.5
- },
- {
-  "text": "soy",
-  "start": 25.54,
-  "end": 25.63
- },
- {
-  "text": "multiplicando",
-  "start": 25.71,
-  "end": 26.5
- },
- {
-  "text": "por",
-  "start": 26.5,
-  "end": 26.69
- },
- {
-  "text": "un",
-  "start": 26.71,
-  "end": 27.09
- },
- {
-  "text": "día.",
-  "start": 27.16,
-  "end": 27.76
- },
- {
-  "text": "si",
-  "start": 27.77,
-  "end": 28.04
+  "text": "pues",
+  "start": 19.91,
+  "end": 20.16
  },
  {
   "text": "no",
-  "start": 28.04,
-  "end": 28.32
+  "start": 20.29,
+  "end": 20.45
  },
  {
-  "text": "me",
-  "start": 28.32,
-  "end": 28.59
+  "text": "cabrón.",
+  "start": 20.45,
+  "end": 21.24
  },
  {
-  "text": "hagas.",
-  "start": 28.65,
-  "end": 29.76
+  "text": "Compara,",
+  "start": 21.31,
+  "end": 22
+ },
+ {
+  "text": "tres",
+  "start": 22.07,
+  "end": 22.43
+ },
+ {
+  "text": "videos",
+  "start": 22.43,
+  "end": 22.95
+ },
+ {
+  "text": "a",
+  "start": 22.97,
+  "end": 23.04
+ },
+ {
+  "text": "la",
+  "start": 23.12,
+  "end": 23.23
+ },
+ {
+  "text": "semana,",
+  "start": 23.23,
+  "end": 23.91
+ },
+ {
+  "text": "yo",
+  "start": 23.93,
+  "end": 24.11
+ },
+ {
+  "text": "literalmente",
+  "start": 24.11,
+  "end": 25.23
+ },
+ {
+  "text": "te",
+  "start": 25.26,
+  "end": 25.41
+ },
+ {
+  "text": "estoy",
+  "start": 25.41,
+  "end": 25.84
+ },
+ {
+  "text": "multiplicando",
+  "start": 25.84,
+  "end": 26.96
+ },
+ {
+  "text": "por",
+  "start": 26.96,
+  "end": 27.24
+ },
+ {
+  "text": "un",
+  "start": 27.24,
+  "end": 27.64
+ },
+ {
+  "text": "día",
+  "start": 27.64,
+  "end": 28.24
+ },
+ {
+  "text": "7",
+  "start": 28.24,
+  "end": 28.49
+ },
+ {
+  "text": "no",
+  "start": 28.63,
+  "end": 28.77
+ },
+ {
+  "text": "mames",
+  "start": 28.77,
+  "end": 29.19
+ },
+ {
+  "text": "más",
+  "start": 29.19,
+  "end": 29.44
+ },
+ {
+  "text": "de",
+  "start": 29.44,
+  "end": 29.61
+ },
+ {
+  "text": "7",
+  "start": 29.61,
+  "end": 29.88
  }
 ]
