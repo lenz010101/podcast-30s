@@ -50,16 +50,22 @@
       #title { background: #0C0C0C; padding: 16px 36px 22px; text-align: center;
         will-change: transform, opacity; box-shadow: 0 10px 34px rgba(0,0,0,.55); }
       .tl { font: 900 66px/1.04 "Mont", sans-serif; color: #fff; letter-spacing: .5px;
-        white-space: nowrap; text-shadow: none; }
+        white-space: nowrap; text-shadow: none; opacity: 0; will-change: transform, opacity; }
       .tl.l2 { color: #FFD700; }
       .group { position: absolute; left: 0; top: 1080px; width: 1080px; height: 460px;
         display: flex; align-items: center; justify-content: center; padding: 0 48px; }
       .ln { text-align: center; line-height: 1.14; color: #fff; font-family: "Mont", sans-serif;
         font-weight: 900; letter-spacing: -1px; max-width: 984px;
+        -webkit-text-stroke: 4px #0A0A0A; paint-order: stroke fill;
         text-shadow: 0 4px 18px rgba(0,0,0,.7), 0 1px 4px rgba(0,0,0,.9); }
       .ln .w { display: inline-block; opacity: 0; will-change: transform, opacity; }
-      .ln .hl { color: #FFD700; text-shadow: 0 4px 18px rgba(0,0,0,.7), 0 0 34px rgba(255,215,0,.45); }
-      .ln .hl2 { color: #7CFFB2; text-shadow: 0 4px 18px rgba(0,0,0,.7), 0 0 34px rgba(124,255,178,.4); }
+      .ln .hl { color: #FFD700; font-size: 1.13em;
+        text-shadow: 0 4px 18px rgba(0,0,0,.7), 0 0 34px rgba(255,215,0,.45); }
+      .ln .hl2 { color: #7CFFB2; font-size: 1.13em;
+        text-shadow: 0 4px 18px rgba(0,0,0,.7), 0 0 34px rgba(124,255,178,.4); }
+      .floatBox { position: absolute; font: 900 250px/0.95 "Mont", sans-serif; letter-spacing: -6px;
+        opacity: 0; will-change: transform, opacity; text-shadow: 0 10px 38px rgba(0,0,0,.65);
+        -webkit-text-stroke: 5px #0A0A0A; paint-order: stroke fill; }
       .card { display: flex; align-items: center; justify-content: center; z-index: 8; }
       .cword { font: 900 172px "Mont", sans-serif; letter-spacing: -2px; text-align: center;
         line-height: 1.02; padding: 0 40px; opacity: 0; will-change: transform, opacity;
@@ -68,17 +74,18 @@
         background: #000; opacity: 0; z-index: 30; }
     </style>
   <script data-hyperframes-preview-runtime="1" src="/api/runtime.js"></script>
-<meta name="hyperframes-project-signature" content="fd2613672ccc1c7859db3810">
+<meta name="hyperframes-project-signature" content="4e15c2f688e68e3234aefc5d">
 </head>
   <body>
     <div data-hf-id="hf-coex" id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
       <audio data-hf-id="hf-yaxb" id="voice" src="assets/vo.m4a" data-start="0" data-duration="30" data-media-start="0.00" data-playback-rate="1.00000" data-end="30"></audio>
-      <audio data-hf-id="hf-mpay" id="sti" src="assets/sfx/pop.mp3" data-start="0.15" data-duration="0.62" data-volume="0.55" data-end="0.77"></audio>
+      <audio data-hf-id="hf-yscm" id="sti" src="assets/sfx/pop.mp3" data-start="0.2" data-duration="0.62" data-volume="0.55" data-end="0.8200000000000001"></audio>
+      <audio data-hf-id="hf-u2jj" id="sti2" src="assets/sfx/whoosh.mp3" data-start="0.42" data-duration="0.51" data-volume="0.55" data-end="0.9299999999999999"></audio>
+      <audio data-hf-id="hf-e689" id="sfl0" src="assets/sfx/whoosh.mp3" data-start="10.95" data-duration="0.51" data-volume="0.6" data-end="11.459999999999999"></audio>
+      <audio data-hf-id="hf-27ij" id="sfl1" src="assets/sfx/whoosh.mp3" data-start="11.95" data-duration="0.51" data-volume="0.6" data-end="12.459999999999999"></audio>
+      <audio data-hf-id="hf-4mpx" id="sfl2" src="assets/sfx/whoosh.mp3" data-start="17.05" data-duration="0.51" data-volume="0.6" data-end="17.560000000000002"></audio>
       <audio data-hf-id="hf-jnti" id="scd0" src="assets/sfx/whoosh-big.mp3" data-start="5.75" data-duration="1.0" data-volume="0.55" data-end="6.75"></audio>
-      <audio data-hf-id="hf-p8ud" id="scd1" src="assets/sfx/whoosh-big.mp3" data-start="10.95" data-duration="1.0" data-volume="0.55" data-end="11.95"></audio>
-      <audio data-hf-id="hf-ordf" id="scd2" src="assets/sfx/whoosh-big.mp3" data-start="11.95" data-duration="1.0" data-volume="0.55" data-end="12.95"></audio>
-      <audio data-hf-id="hf-6kot" id="scd3" src="assets/sfx/whoosh-big.mp3" data-start="17.05" data-duration="1.0" data-volume="0.55" data-end="18.05"></audio>
-      <audio data-hf-id="hf-y2qq" id="scd4" src="assets/sfx/whoosh-big.mp3" data-start="25.75" data-duration="1.0" data-volume="0.55" data-end="26.75"></audio>
+      <audio data-hf-id="hf-ycnj" id="scd1" src="assets/sfx/whoosh-big.mp3" data-start="25.75" data-duration="1.0" data-volume="0.55" data-end="26.75"></audio>
       <audio data-hf-id="hf-xis6" id="sp0" src="assets/sfx/pop.mp3" data-start="4.4" data-duration="0.62" data-volume="0.7" data-end="5.0200000000000005"></audio>
       <audio data-hf-id="hf-vy0c" id="sp1" src="assets/sfx/pop.mp3" data-start="10" data-duration="0.62" data-volume="0.7" data-end="10.62"></audio>
       <audio data-hf-id="hf-gt15" id="sp2" src="assets/sfx/pop.mp3" data-start="13.45" data-duration="0.62" data-volume="0.7" data-end="14.069999999999999"></audio>
@@ -90,6 +97,9 @@
       <audio data-hf-id="hf-gcqp" id="sb2" src="assets/sfx/bass.mp3" data-start="24.3" data-duration="1.0" data-volume="0.8" data-end="25.3"></audio>
       <div data-hf-id="hf-hzj6" id="stage" class="clip"><video data-hf-id="hf-jxtf" id="vid" src="assets/vid/seg.mp4" muted playsinline preload="auto" data-start="0" data-duration="30" data-playback-rate="1.00000" data-end="30" data-has-audio="false"></video></div>
       <div data-hf-id="hf-x6vh" id="titleWrap"><div data-hf-id="hf-7ba5" id="title"><div data-hf-id="hf-kcgv" class="tl">ME QUIEREN</div><div data-hf-id="hf-dlg7" class="tl l2">COMPETIR</div></div></div>
+      <div data-hf-id="hf-2jwm" id="fl0" class="clip" data-start="10.95" data-duration="0.9"><div data-hf-id="hf-xbv1" class="floatBox" id="fb0" style="left:655px;top:530px;color:#FFD700;font-size:240px">10</div></div>
+      <div data-hf-id="hf-pde2" id="fl1" class="clip" data-start="11.95" data-duration="0.9"><div data-hf-id="hf-rh0y" class="floatBox" id="fb1" style="left:745px;top:560px;color:#FFD700;font-size:250px">7</div></div>
+      <div data-hf-id="hf-irlp" id="fl2" class="clip" data-start="17.05" data-duration="1.05"><div data-hf-id="hf-kw0j" class="floatBox" id="fb2" style="left:690px;top:560px;color:#7CFFB2;font-size:250px">3</div></div>
       <div data-hf-id="hf-h9tp" id="cp0" class="clip" data-start="-0.12" data-duration="1.01"><div data-hf-id="hf-k01d" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-4jba" class="ln" style="font-size:90px"><span data-hf-id="hf-wue3" class="w" id="cp0w0">la</span> <span data-hf-id="hf-xte9" class="w" id="cp0w1">mayoría</span> <span data-hf-id="hf-qpld" class="w" id="cp0w2">de</span></div></div></div>
       <div data-hf-id="hf-oy32" id="cp1" class="clip" data-start="0.92" data-duration="1.82"><div data-hf-id="hf-je3p" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-xn2x" class="ln" style="font-size:80px"><span data-hf-id="hf-vaia" class="w" id="cp1w0">sus</span> <span data-hf-id="hf-bssk" class="w" id="cp1w1">pinches</span> <span data-hf-id="hf-y7fl" class="w" id="cp1w2">creadores</span></div></div></div>
       <div data-hf-id="hf-r4wc" id="cp2" class="clip" data-start="2.77" data-duration="1.2"><div data-hf-id="hf-kl0s" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-omve" class="ln" style="font-size:90px"><span data-hf-id="hf-r294" class="w" id="cp2w0">me</span> <span data-hf-id="hf-ops8" class="w" id="cp2w1">quieren</span> <span data-hf-id="hf-eo5l" class="w hl" id="cp2w2">competir</span></div></div></div>
@@ -100,33 +110,45 @@
       <div data-hf-id="hf-90gc" id="cp9" class="clip" data-start="8.63" data-duration="0.7"><div data-hf-id="hf-lrxv" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-lzu3" class="ln" style="font-size:100px"><span data-hf-id="hf-o042" class="w" id="cp9w0">un</span> <span data-hf-id="hf-njjz" class="w" id="cp9w1">video</span> <span data-hf-id="hf-ybw2" class="w" id="cp9w2">al</span></div></div></div>
       <div data-hf-id="hf-bkgh" id="cp10" class="clip" data-start="9.36" data-duration="0.47"><div data-hf-id="hf-glyi" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-me54" class="ln" style="font-size:100px"><span data-hf-id="hf-cbq1" class="w hl" id="cp10w0">día.</span></div></div></div>
       <div data-hf-id="hf-la3j" id="cp11" class="clip" data-start="9.86" data-duration="0.49"><div data-hf-id="hf-g7nh" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-jlzx" class="ln" style="font-size:100px"><span data-hf-id="hf-7bbd" class="w hl2" id="cp11w0">Cabrón,</span></div></div></div>
-      <div data-hf-id="hf-es8o" id="cp15" class="clip" data-start="13.2" data-duration="0.92"><div data-hf-id="hf-0jrj" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-k0ay" class="ln" style="font-size:100px"><span data-hf-id="hf-baor" class="w" id="cp15w0">en</span> <span data-hf-id="hf-6g80" class="w" id="cp15w1">lunes,</span></div></div></div>
-      <div data-hf-id="hf-65c0" id="cp16" class="clip" data-start="14.15" data-duration="0.56"><div data-hf-id="hf-0y2k" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-kelz" class="ln" style="font-size:100px"><span data-hf-id="hf-d9s8" class="w hl2" id="cp16w0">cabrón,</span></div></div></div>
-      <div data-hf-id="hf-chp3" id="cp17" class="clip" data-start="14.74" data-duration="0.82"><div data-hf-id="hf-zr5h" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-ksx0" class="ln" style="font-size:100px"><span data-hf-id="hf-vc39" class="w" id="cp17w0">en</span> <span data-hf-id="hf-xsps" class="w" id="cp17w1">lunes.</span></div></div></div>
-      <div data-hf-id="hf-ie5v" id="cp18" class="clip" data-start="15.59" data-duration="1.08"><div data-hf-id="hf-05gi" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-ptsh" class="ln" style="font-size:90px"><span data-hf-id="hf-g100" class="w" id="cp18w0">Así</span> <span data-hf-id="hf-3jtk" class="w" id="cp18w1">se</span> <span data-hf-id="hf-4ac2" class="w" id="cp18w2">despiertan.</span></div></div></div>
-      <div data-hf-id="hf-2ip1" id="cp21" class="clip" data-start="17.73" data-duration="0.72"><div data-hf-id="hf-24zn" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-q83i" class="ln" style="font-size:90px"><span data-hf-id="hf-pr6y" class="w" id="cp21w0">semana</span> <span data-hf-id="hf-4q3j" class="w" id="cp21w1">y</span> <span data-hf-id="hf-johf" class="w" id="cp21w2">quieres</span></div></div></div>
-      <div data-hf-id="hf-w8hw" id="cp22" class="clip" data-start="18.48" data-duration="0.84"><div data-hf-id="hf-2jao" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-odo9" class="ln" style="font-size:100px"><span data-hf-id="hf-iond" class="w hl" id="cp22w0">competir,</span></div></div></div>
-      <div data-hf-id="hf-t8oy" id="cp23" class="clip" data-start="19.35" data-duration="0.66"><div data-hf-id="hf-1cdl" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-orza" class="ln" style="font-size:100px"><span data-hf-id="hf-nkh4" class="w" id="cp23w0">tu</span> <span data-hf-id="hf-1nbu" class="w" id="cp23w1">es</span> <span data-hf-id="hf-7w7q" class="w" id="cp23w2">no,</span></div></div></div>
-      <div data-hf-id="hf-4s46" id="cp24" class="clip" data-start="20.04" data-duration="0.5"><div data-hf-id="hf-1qom" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-irka" class="ln" style="font-size:100px"><span data-hf-id="hf-didv" class="w hl2" id="cp24w0">cabrón.</span></div></div></div>
-      <div data-hf-id="hf-bs8k" id="cp25" class="clip" data-start="20.57" data-duration="2"><div data-hf-id="hf-xdbb" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-qmej" class="ln" style="font-size:90px"><span data-hf-id="hf-ghkc" class="w" id="cp25w0">Compara</span> <span data-hf-id="hf-9cxt" class="w" id="cp25w1">3</span> <span data-hf-id="hf-vwx3" class="w" id="cp25w2">videos</span></div></div></div>
-      <div data-hf-id="hf-x0lk" id="cp26" class="clip" data-start="22.6" data-duration="1.53"><div data-hf-id="hf-xrmc" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-id99" class="ln" style="font-size:100px"><span data-hf-id="hf-dtel" class="w" id="cp26w0">a</span> <span data-hf-id="hf-98u0" class="w" id="cp26w1">la</span> <span data-hf-id="hf-6ggz" class="w" id="cp26w2">semana.</span></div></div></div>
-      <div data-hf-id="hf-6yvo" id="cp27" class="clip" data-start="24.16" data-duration="0.23"><div data-hf-id="hf-0e6s" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-jk6c" class="ln" style="font-size:100px"><span data-hf-id="hf-3s3d" class="w" id="cp27w0">Yo,</span></div></div></div>
-      <div data-hf-id="hf-3hkt" id="cp28" class="clip" data-start="24.42" data-duration="0.95"><div data-hf-id="hf-zzvr" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-r0pk" class="ln" style="font-size:90px"><span data-hf-id="hf-ezu6" class="w" id="cp28w0">literalmente,</span></div></div></div>
-      <div data-hf-id="hf-kjpk" id="cp30" class="clip" data-start="26.5" data-duration="1.24"><div data-hf-id="hf-zlkq" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-j5vb" class="ln" style="font-size:100px"><span data-hf-id="hf-b2hw" class="w" id="cp30w0">por</span> <span data-hf-id="hf-uipx" class="w" id="cp30w1">un</span> <span data-hf-id="hf-mfe9" class="w hl" id="cp30w2">día.</span></div></div></div>
-      <div data-hf-id="hf-mk4f" id="cp31" class="clip" data-start="27.77" data-duration="0.85"><div data-hf-id="hf-z79p" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-kcse" class="ln" style="font-size:100px"><span data-hf-id="hf-p0d6" class="w" id="cp31w0">si</span> <span data-hf-id="hf-4ob8" class="w" id="cp31w1">no</span> <span data-hf-id="hf-g4ei" class="w" id="cp31w2">me</span></div></div></div>
-      <div data-hf-id="hf-hhsf" id="cp32" class="clip" data-start="28.65" data-duration="1.32"><div data-hf-id="hf-1zew" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-jyhd" class="ln" style="font-size:100px"><span data-hf-id="hf-vczv" class="w" id="cp32w0">hagas.</span></div></div></div>
+      <div data-hf-id="hf-sp48" id="cp12" class="clip" data-start="10.38" data-duration="0.93"><div data-hf-id="hf-0jrj" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-k0ay" class="ln" style="font-size:100px"><span data-hf-id="hf-j0k9" class="w" id="cp12w0">ella</span> <span data-hf-id="hf-4c87" class="w" id="cp12w1">subí</span> <span data-hf-id="hf-fg3w" class="w hl" id="cp12w2">10</span></div></div></div>
+      <div data-hf-id="hf-di7b" id="cp13" class="clip" data-start="11.34" data-duration="0.36"><div data-hf-id="hf-0y2k" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-kelz" class="ln" style="font-size:100px"><span data-hf-id="hf-j5dl" class="w" id="cp13w0">y</span> <span data-hf-id="hf-jjwe" class="w" id="cp13w1">a</span> <span data-hf-id="hf-xhcb" class="w" id="cp13w2">tu</span></div></div></div>
+      <div data-hf-id="hf-lt6v" id="cp14" class="clip" data-start="11.73" data-duration="1.44"><div data-hf-id="hf-zr5h" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-ptsh" class="ln" style="font-size:90px"><span data-hf-id="hf-e046" class="w" id="cp14w0">de</span> <span data-hf-id="hf-jpkl" class="w" id="cp14w1">7</span> <span data-hf-id="hf-bx3y" class="w hl2" id="cp14w2">polémicas</span></div></div></div>
+      <div data-hf-id="hf-es8o" id="cp15" class="clip" data-start="13.2" data-duration="0.92"><div data-hf-id="hf-05gi" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-ksx0" class="ln" style="font-size:100px"><span data-hf-id="hf-baor" class="w" id="cp15w0">en</span> <span data-hf-id="hf-6g80" class="w" id="cp15w1">lunes,</span></div></div></div>
+      <div data-hf-id="hf-65c0" id="cp16" class="clip" data-start="14.15" data-duration="0.56"><div data-hf-id="hf-24zn" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-odo9" class="ln" style="font-size:100px"><span data-hf-id="hf-d9s8" class="w hl2" id="cp16w0">cabrón,</span></div></div></div>
+      <div data-hf-id="hf-chp3" id="cp17" class="clip" data-start="14.74" data-duration="0.82"><div data-hf-id="hf-2jao" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-orza" class="ln" style="font-size:100px"><span data-hf-id="hf-vc39" class="w" id="cp17w0">en</span> <span data-hf-id="hf-xsps" class="w" id="cp17w1">lunes.</span></div></div></div>
+      <div data-hf-id="hf-ie5v" id="cp18" class="clip" data-start="15.59" data-duration="1.08"><div data-hf-id="hf-1cdl" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-q83i" class="ln" style="font-size:90px"><span data-hf-id="hf-g100" class="w" id="cp18w0">Así</span> <span data-hf-id="hf-3jtk" class="w" id="cp18w1">se</span> <span data-hf-id="hf-4ac2" class="w" id="cp18w2">despiertan.</span></div></div></div>
+      <div data-hf-id="hf-mbnf" id="cp19" class="clip" data-start="16.7" data-duration="0.51"><div data-hf-id="hf-1qom" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-irka" class="ln" style="font-size:100px"><span data-hf-id="hf-knf3" class="w" id="cp19w0">Tu</span> <span data-hf-id="hf-qv7l" class="w" id="cp19w1">subes</span> <span data-hf-id="hf-sk87" class="w" id="cp19w2">3</span></div></div></div>
+      <div data-hf-id="hf-svd3" id="cp20" class="clip" data-start="17.24" data-duration="0.46"><div data-hf-id="hf-xdbb" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-id99" class="ln" style="font-size:100px"><span data-hf-id="hf-8h7o" class="w" id="cp20w0">videos</span> <span data-hf-id="hf-btic" class="w" id="cp20w1">a</span> <span data-hf-id="hf-5lbp" class="w" id="cp20w2">la</span></div></div></div>
+      <div data-hf-id="hf-2ip1" id="cp21" class="clip" data-start="17.73" data-duration="0.72"><div data-hf-id="hf-xrmc" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-qmej" class="ln" style="font-size:90px"><span data-hf-id="hf-pr6y" class="w" id="cp21w0">semana</span> <span data-hf-id="hf-4q3j" class="w" id="cp21w1">y</span> <span data-hf-id="hf-johf" class="w" id="cp21w2">quieres</span></div></div></div>
+      <div data-hf-id="hf-w8hw" id="cp22" class="clip" data-start="18.48" data-duration="0.84"><div data-hf-id="hf-0e6s" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-jk6c" class="ln" style="font-size:100px"><span data-hf-id="hf-iond" class="w hl" id="cp22w0">competir,</span></div></div></div>
+      <div data-hf-id="hf-t8oy" id="cp23" class="clip" data-start="19.35" data-duration="0.66"><div data-hf-id="hf-zzvr" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-j5vb" class="ln" style="font-size:100px"><span data-hf-id="hf-nkh4" class="w" id="cp23w0">tu</span> <span data-hf-id="hf-1nbu" class="w" id="cp23w1">es</span> <span data-hf-id="hf-7w7q" class="w" id="cp23w2">no,</span></div></div></div>
+      <div data-hf-id="hf-4s46" id="cp24" class="clip" data-start="20.04" data-duration="0.5"><div data-hf-id="hf-zlkq" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-kcse" class="ln" style="font-size:100px"><span data-hf-id="hf-didv" class="w hl2" id="cp24w0">cabrón.</span></div></div></div>
+      <div data-hf-id="hf-bs8k" id="cp25" class="clip" data-start="20.57" data-duration="2"><div data-hf-id="hf-z79p" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-r0pk" class="ln" style="font-size:90px"><span data-hf-id="hf-ghkc" class="w" id="cp25w0">Compara</span> <span data-hf-id="hf-9cxt" class="w" id="cp25w1">3</span> <span data-hf-id="hf-vwx3" class="w" id="cp25w2">videos</span></div></div></div>
+      <div data-hf-id="hf-x0lk" id="cp26" class="clip" data-start="22.6" data-duration="1.53"><div data-hf-id="hf-1zew" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-jyhd" class="ln" style="font-size:100px"><span data-hf-id="hf-dtel" class="w" id="cp26w0">a</span> <span data-hf-id="hf-98u0" class="w" id="cp26w1">la</span> <span data-hf-id="hf-6ggz" class="w" id="cp26w2">semana.</span></div></div></div>
+      <div data-hf-id="hf-6yvo" id="cp27" class="clip" data-start="24.16" data-duration="0.23"><div data-hf-id="hf-1l3v" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-l5eg" class="ln" style="font-size:100px"><span data-hf-id="hf-3s3d" class="w" id="cp27w0">Yo,</span></div></div></div>
+      <div data-hf-id="hf-3hkt" id="cp28" class="clip" data-start="24.42" data-duration="0.95"><div data-hf-id="hf-16su" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-rf0l" class="ln" style="font-size:90px"><span data-hf-id="hf-ezu6" class="w" id="cp28w0">literalmente,</span></div></div></div>
+      <div data-hf-id="hf-kjpk" id="cp30" class="clip" data-start="26.5" data-duration="1.24"><div data-hf-id="hf-0sht" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-kr3f" class="ln" style="font-size:100px"><span data-hf-id="hf-b2hw" class="w" id="cp30w0">por</span> <span data-hf-id="hf-uipx" class="w" id="cp30w1">un</span> <span data-hf-id="hf-mfe9" class="w hl" id="cp30w2">día.</span></div></div></div>
+      <div data-hf-id="hf-mk4f" id="cp31" class="clip" data-start="27.77" data-duration="0.85"><div data-hf-id="hf-3kn0" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-ly0i" class="ln" style="font-size:100px"><span data-hf-id="hf-p0d6" class="w" id="cp31w0">si</span> <span data-hf-id="hf-4ob8" class="w" id="cp31w1">no</span> <span data-hf-id="hf-g4ei" class="w" id="cp31w2">me</span></div></div></div>
+      <div data-hf-id="hf-hhsf" id="cp32" class="clip" data-start="28.65" data-duration="1.32"><div data-hf-id="hf-36bz" class="group" data-layout-allow-overlap=""><div data-hf-id="hf-ljph" class="ln" style="font-size:100px"><span data-hf-id="hf-vczv" class="w" id="cp32w0">hagas.</span></div></div></div>
       <div data-hf-id="hf-uue6" id="cd0" class="clip card" style="background:#0C0C0C" data-start="5.75" data-duration="0.62"><div data-hf-id="hf-aifv" class="cword" id="cdw0" style="color:#FFD700;font-size:132px">UN VIDEO AL DÍA</div></div>
-      <div data-hf-id="hf-fjxu" id="cd1" class="clip card" style="background:#FFD700" data-start="10.95" data-duration="0.5"><div data-hf-id="hf-ip9l" class="cword" id="cdw1" style="color:#0C0C0C;font-size:300px">10</div></div>
-      <div data-hf-id="hf-wa5c" id="cd2" class="clip card" style="background:#0C0C0C" data-start="11.95" data-duration="0.5"><div data-hf-id="hf-bky4" class="cword" id="cdw2" style="color:#FFD700;font-size:300px">7</div></div>
-      <div data-hf-id="hf-cpbz" id="cd3" class="clip card" style="background:#7CFFB2" data-start="17.05" data-duration="0.5"><div data-hf-id="hf-1357" class="cword" id="cdw3" style="color:#0C0C0C;font-size:300px">3</div></div>
-      <div data-hf-id="hf-yw3g" id="cd4" class="clip card" style="background:#0C0C0C" data-start="25.75" data-duration="0.62"><div data-hf-id="hf-bmty" class="cword" id="cdw4" style="color:#7CFFB2;font-size:112px">MULTIPLICANDO</div></div>
+      <div data-hf-id="hf-9lzf" id="cd1" class="clip card" style="background:#0C0C0C" data-start="25.75" data-duration="0.62"><div data-hf-id="hf-45cl" class="cword" id="cdw1" style="color:#7CFFB2;font-size:112px">MULTIPLICANDO</div></div>
       <div data-hf-id="hf-c6yo" id="dip"></div>
     </div>
     
   <script>window.__timelines = window.__timelines || {};
 const tl = gsap.timeline({ paused: true });
 window.__timelines["main"] = tl;
-tl.fromTo("#title", { opacity: 0, y: -76, scale: 0.68, rotate: -3 }, { opacity: 1, y: 0, scale: 1, rotate: 0, duration: 0.45, ease: "back.out(2.4)", immediateRender: false }, 0.15);
+tl.fromTo("#title .tl:nth-child(1)", { opacity: 0, y: -70, scale: 0.7, rotate: -4 }, { opacity: 1, y: 0, scale: 1, rotate: 0, duration: 0.4, ease: "back.out(2.4)", immediateRender: false }, 0);
+tl.fromTo("#title .tl:nth-child(2)", { opacity: 0, y: -70, scale: 0.7, rotate: 4 }, { opacity: 1, y: 0, scale: 1, rotate: 0, duration: 0.4, ease: "back.out(2.4)", immediateRender: false }, 0.22);
+tl.fromTo("#fb0", { opacity: 0, scale: 0.3, rotate: -27 }, { opacity: 1, scale: 1, rotate: -9, duration: 0.3, ease: "back.out(3)", immediateRender: false }, 10.75);
+tl.to("#fb0", { y: -20, duration: 0.28, ease: "sine.inOut", yoyo: true, repeat: 1 }, 11.05);
+tl.to("#fb0", { opacity: 0, scale: 0.7, duration: 0.15, ease: "power2.in" }, 11.5);
+tl.fromTo("#fb1", { opacity: 0, scale: 0.3, rotate: -10 }, { opacity: 1, scale: 1, rotate: 8, duration: 0.3, ease: "back.out(3)", immediateRender: false }, 11.75);
+tl.to("#fb1", { y: -20, duration: 0.28, ease: "sine.inOut", yoyo: true, repeat: 1 }, 12.05);
+tl.to("#fb1", { opacity: 0, scale: 0.7, duration: 0.15, ease: "power2.in" }, 12.5);
+tl.fromTo("#fb2", { opacity: 0, scale: 0.3, rotate: -28 }, { opacity: 1, scale: 1, rotate: -10, duration: 0.3, ease: "back.out(3)", immediateRender: false }, 16.85);
+tl.to("#fb2", { y: -20, duration: 0.35, ease: "sine.inOut", yoyo: true, repeat: 1 }, 17.15);
+tl.to("#fb2", { opacity: 0, scale: 0.7, duration: 0.15, ease: "power2.in" }, 17.75);
 tl.fromTo("#cp0w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, -0.12);
 tl.fromTo("#cp0w1", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, -0.07);
 tl.fromTo("#cp0w2", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, -0.01);
@@ -158,6 +180,18 @@ tl.fromTo("#cp10w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, 
 tl.to("#cp10", { opacity: 0, duration: 0.1, ease: "power2.in" }, 9.73);
 tl.fromTo("#cp11w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 9.86);
 tl.to("#cp11", { opacity: 0, duration: 0.1, ease: "power2.in" }, 10.25);
+tl.fromTo("#cp12w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 10.38);
+tl.fromTo("#cp12w1", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 10.44);
+tl.fromTo("#cp12w2", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 10.49);
+tl.to("#cp12", { opacity: 0, duration: 0.1, ease: "power2.in" }, 11.21);
+tl.fromTo("#cp13w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 11.34);
+tl.fromTo("#cp13w1", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 11.39);
+tl.fromTo("#cp13w2", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 11.45);
+tl.to("#cp13", { opacity: 0, duration: 0.1, ease: "power2.in" }, 11.6);
+tl.fromTo("#cp14w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 11.73);
+tl.fromTo("#cp14w1", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 11.79);
+tl.fromTo("#cp14w2", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 11.84);
+tl.to("#cp14", { opacity: 0, duration: 0.1, ease: "power2.in" }, 13.07);
 tl.fromTo("#cp15w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 13.2);
 tl.fromTo("#cp15w1", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 13.25);
 tl.to("#cp15", { opacity: 0, duration: 0.1, ease: "power2.in" }, 14.02);
@@ -170,6 +204,14 @@ tl.fromTo("#cp18w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, 
 tl.fromTo("#cp18w1", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 15.64);
 tl.fromTo("#cp18w2", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 15.7);
 tl.to("#cp18", { opacity: 0, duration: 0.1, ease: "power2.in" }, 16.57);
+tl.fromTo("#cp19w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 16.7);
+tl.fromTo("#cp19w1", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 16.75);
+tl.fromTo("#cp19w2", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 16.81);
+tl.to("#cp19", { opacity: 0, duration: 0.1, ease: "power2.in" }, 17.11);
+tl.fromTo("#cp20w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 17.24);
+tl.fromTo("#cp20w1", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 17.29);
+tl.fromTo("#cp20w2", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 17.35);
+tl.to("#cp20", { opacity: 0, duration: 0.1, ease: "power2.in" }, 17.6);
 tl.fromTo("#cp21w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 17.73);
 tl.fromTo("#cp21w1", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 17.79);
 tl.fromTo("#cp21w2", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: "back.out(3)", immediateRender: false }, 17.84);
@@ -205,30 +247,24 @@ tl.fromTo("#cp32w0", { opacity: 0, scale: 0.5, y: 16 }, { opacity: 1, scale: 1, 
 tl.to("#cp32", { opacity: 0, duration: 0.1, ease: "power2.in" }, 29.87);
 tl.fromTo("#cdw0", { opacity: 0, scale: 0.55, rotate: -4 }, { opacity: 1, scale: 1, rotate: 0, duration: 0.2, ease: "back.out(3)", immediateRender: false }, 5.75);
 tl.to("#cd0", { opacity: 0, scale: 0.9, duration: 0.13, ease: "power2.in" }, 6.24);
-tl.fromTo("#cdw1", { opacity: 0, scale: 0.55, rotate: -4 }, { opacity: 1, scale: 1, rotate: 0, duration: 0.2, ease: "back.out(3)", immediateRender: false }, 10.95);
-tl.to("#cd1", { opacity: 0, scale: 0.9, duration: 0.13, ease: "power2.in" }, 11.32);
-tl.fromTo("#cdw2", { opacity: 0, scale: 0.55, rotate: -4 }, { opacity: 1, scale: 1, rotate: 0, duration: 0.2, ease: "back.out(3)", immediateRender: false }, 11.95);
-tl.to("#cd2", { opacity: 0, scale: 0.9, duration: 0.13, ease: "power2.in" }, 12.32);
-tl.fromTo("#cdw3", { opacity: 0, scale: 0.55, rotate: -4 }, { opacity: 1, scale: 1, rotate: 0, duration: 0.2, ease: "back.out(3)", immediateRender: false }, 17.05);
-tl.to("#cd3", { opacity: 0, scale: 0.9, duration: 0.13, ease: "power2.in" }, 17.42);
-tl.fromTo("#cdw4", { opacity: 0, scale: 0.55, rotate: -4 }, { opacity: 1, scale: 1, rotate: 0, duration: 0.2, ease: "back.out(3)", immediateRender: false }, 25.75);
-tl.to("#cd4", { opacity: 0, scale: 0.9, duration: 0.13, ease: "power2.in" }, 26.24);
+tl.fromTo("#cdw1", { opacity: 0, scale: 0.55, rotate: -4 }, { opacity: 1, scale: 1, rotate: 0, duration: 0.2, ease: "back.out(3)", immediateRender: false }, 25.75);
+tl.to("#cd1", { opacity: 0, scale: 0.9, duration: 0.13, ease: "power2.in" }, 26.24);
 tl.fromTo("#vid", { x: -12 }, { x: 6, duration: 7.5, ease: "sine.inOut", immediateRender: false }, 0);
 tl.fromTo("#vid", { x: 6 }, { x: -6, duration: 7.5, ease: "sine.inOut", immediateRender: false }, 7.5);
 tl.fromTo("#vid", { x: -6 }, { x: 10, duration: 7.5, ease: "sine.inOut", immediateRender: false }, 15);
 tl.fromTo("#vid", { x: 10 }, { x: -8, duration: 7.5, ease: "sine.inOut", immediateRender: false }, 22.5);
-tl.to("#stage", { scale: 1.16, duration: 0.25, ease: "power2.out" }, 4.4);
-tl.to("#stage", { scale: 1, duration: 0.45, ease: "power2.inOut" }, 5.25);
-tl.to("#stage", { scale: 1.16, duration: 0.25, ease: "power2.out" }, 10);
-tl.to("#stage", { scale: 1, duration: 0.45, ease: "power2.inOut" }, 10.85);
-tl.to("#stage", { scale: 1.16, duration: 0.25, ease: "power2.out" }, 13.45);
-tl.to("#stage", { scale: 1, duration: 0.45, ease: "power2.inOut" }, 14.3);
-tl.to("#stage", { scale: 1.16, duration: 0.25, ease: "power2.out" }, 15.6);
-tl.to("#stage", { scale: 1, duration: 0.45, ease: "power2.inOut" }, 16.45);
-tl.to("#stage", { scale: 1.16, duration: 0.25, ease: "power2.out" }, 19.6);
-tl.to("#stage", { scale: 1, duration: 0.45, ease: "power2.inOut" }, 20.45);
-tl.to("#stage", { scale: 1.22, duration: 0.25, ease: "power2.out" }, 24.3);
-tl.to("#stage", { scale: 1, duration: 0.45, ease: "power2.inOut" }, 25.45);
+tl.fromTo("#stage", { scale: 1 }, { scale: 1.1, duration: 0.04, ease: "none", immediateRender: false }, 4.4);
+tl.fromTo("#stage", { scale: 1.1 }, { scale: 1, duration: 0.04, ease: "none", immediateRender: false }, 5.24);
+tl.fromTo("#stage", { scale: 1 }, { scale: 1.1, duration: 0.04, ease: "none", immediateRender: false }, 10);
+tl.fromTo("#stage", { scale: 1.1 }, { scale: 1, duration: 0.04, ease: "none", immediateRender: false }, 11.34);
+tl.fromTo("#stage", { scale: 1 }, { scale: 1.1, duration: 0.04, ease: "none", immediateRender: false }, 13.45);
+tl.fromTo("#stage", { scale: 1.1 }, { scale: 1, duration: 0.04, ease: "none", immediateRender: false }, 14.79);
+tl.fromTo("#stage", { scale: 1 }, { scale: 1.1, duration: 0.04, ease: "none", immediateRender: false }, 15.6);
+tl.fromTo("#stage", { scale: 1.1 }, { scale: 1, duration: 0.04, ease: "none", immediateRender: false }, 16.44);
+tl.fromTo("#stage", { scale: 1 }, { scale: 1.1, duration: 0.04, ease: "none", immediateRender: false }, 19.6);
+tl.fromTo("#stage", { scale: 1.1 }, { scale: 1, duration: 0.04, ease: "none", immediateRender: false }, 20.44);
+tl.fromTo("#stage", { scale: 1 }, { scale: 1.26, duration: 0.04, ease: "none", immediateRender: false }, 24.3);
+tl.fromTo("#stage", { scale: 1.26 }, { scale: 1, duration: 0.04, ease: "none", immediateRender: false }, 25.24);
 tl.fromTo("#dip", { opacity: 0 }, { opacity: 1, duration: 0.14, ease: "power2.in", immediateRender: false }, 29.86);
 tl.seek(0);</script></body>
 </html>

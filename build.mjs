@@ -49,8 +49,12 @@ if (cfg.title) {
   const lines = String(cfg.title).split("|");
   const inner = lines.map((l, i) => `<div class="tl${i ? " l2" : ""}">${esc(l)}</div>`).join("");
   clips += `      <div id="titleWrap"><div id="title">${inner}</div></div>\n`;
-  tweens += `      tl.fromTo("#title", { opacity: 0, y: -76, scale: .68, rotate: -3 }, { opacity: 1, y: 0, scale: 1, rotate: 0, duration: .45, ease: "back.out(2.4)", immediateRender: false }, 0.15);\n`;
-  sfx += `      <audio id="sti" src="assets/sfx/pop.mp3" data-start="0.15" data-duration="0.62" data-volume="0.55"></audio>\n`;
+  // NOTA: el runtime desplaza +0.20s los tweens de .tl y .fb* (verificado en browser),
+  // así que se autoran 0.20s antes para que caigan en el tiempo real deseado.
+  tweens += `      tl.fromTo("#title .tl:nth-child(1)", { opacity: 0, y: -70, scale: .7, rotate: -4 }, { opacity: 1, y: 0, scale: 1, rotate: 0, duration: .4, ease: "back.out(2.4)", immediateRender: false }, 0);\n`;
+  tweens += `      tl.fromTo("#title .tl:nth-child(2)", { opacity: 0, y: -70, scale: .7, rotate: 4 }, { opacity: 1, y: 0, scale: 1, rotate: 0, duration: .4, ease: "back.out(2.4)", immediateRender: false }, 0.22);\n`;
+  sfx += `      <audio id="sti" src="assets/sfx/pop.mp3" data-start="0.2" data-duration="0.62" data-volume="0.55"></audio>\n`;
+  sfx += `      <audio id="sti2" src="assets/sfx/whoosh.mp3" data-start="0.42" data-duration="0.51" data-volume="0.55"></audio>\n`;
 }
 
 // ---- floaters: número grande flotando junto a la cara (no cubre todo) ----
@@ -59,14 +63,13 @@ if (cfg.title) {
   const rot = f.rot ?? -10;
   const floatDur = +((dur - 0.35) / 2).toFixed(2);
   clips += `      <div id="fl${i}" class="clip" data-start="${f.t}" data-duration="${dur}"><div class="floatBox" id="fb${i}" style="left:${f.x}px;top:${f.y}px;color:${f.color ?? "#7CFFB2"};font-size:${f.fs ?? 250}px">${esc(f.word)}</div></div>\n`;
-  tweens += `      tl.fromTo("#fb${i}", { opacity: 0, scale: .3, rotate: ${rot - 18} }, { opacity: 1, scale: 1, rotate: ${rot}, duration: .3, ease: "back.out(3)", immediateRender: false }, ${f.t});\n`;
-  tweens += `      tl.to("#fb${i}", { y: -20, duration: ${floatDur}, ease: "sine.inOut", yoyo: true, repeat: 1 }, ${+(f.t + 0.3).toFixed(2)});\n`;
-  tweens += `      tl.to("#fb${i}", { opacity: 0, scale: .7, duration: .15, ease: "power2.in" }, ${+(f.t + dur - 0.15).toFixed(2)});\n`;
-  sfx += `      <audio id="sfl${i}" src="assets/sfx/pop.mp3" data-start="${f.t}" data-duration="0.62" data-volume="0.7"></audio>\n`;
+  // compensación +0.20s del runtime (los tweens de .fb* llegan 0.2s tarde)
+  const c = (x) => +Math.max(0, +(x - 0.2).toFixed(2)).toFixed(2);
+  tweens += `      tl.fromTo("#fb${i}", { opacity: 0, scale: .3, rotate: ${rot - 18} }, { opacity: 1, scale: 1, rotate: ${rot}, duration: .3, ease: "back.out(3)", immediateRender: false }, ${c(f.t)});\n`;
+  tweens += `      tl.to("#fb${i}", { y: -20, duration: ${floatDur}, ease: "sine.inOut", yoyo: true, repeat: 1 }, ${c(f.t + 0.3)});\n`;
+  tweens += `      tl.to("#fb${i}", { opacity: 0, scale: .7, duration: .15, ease: "power2.in" }, ${c(f.t + dur - 0.15)});\n`;
+  sfx += `      <audio id="sfl${i}" src="assets/sfx/whoosh.mp3" data-start="${f.t}" data-duration="0.51" data-volume="0.6"></audio>\n`;
 });
-
-// whoosh de apertura
-sfx += `      <audio id="sopen" src="assets/sfx/whoosh.mp3" data-start="0.03" data-duration="0.51" data-volume="0.45"></audio>\n`;
 
 // ---- captions kinéticas ----
 beats.forEach((b, i) => {
@@ -105,11 +108,12 @@ beats.forEach((b, i) => {
   tweens += `      tl.fromTo("#vid", { x: ${v0} }, { x: ${v1}, duration: ${+(t1 - t0).toFixed(2)}, ease: "sine.inOut", immediateRender: false }, ${t0});\n`;
 });
 
-// ---- punch-ins ----
+// ---- punch-ins: corte seco (estilo Hormozi, 1 frame) ----
 (cfg.punches ?? []).forEach((p, i) => {
-  const up = p.up ?? 0.22, hold = p.hold ?? 0.6, down = p.down ?? 0.42, s = p.s ?? 1.19;
-  tweens += `      tl.to("#stage", { scale: ${s}, duration: ${up}, ease: "power2.out" }, ${p.t});\n`;
-  tweens += `      tl.to("#stage", { scale: 1, duration: ${down}, ease: "power2.inOut" }, ${+(p.t + up + hold).toFixed(2)});\n`;
+  const hold = p.hold ?? 0.8, s = p.s ?? 1.1;
+  const back = +(p.t + 0.04 + hold).toFixed(2);
+  tweens += `      tl.fromTo("#stage", { scale: 1 }, { scale: ${s}, duration: .04, ease: "none", immediateRender: false }, ${p.t});\n`;
+  tweens += `      tl.fromTo("#stage", { scale: ${s} }, { scale: 1, duration: .04, ease: "none", immediateRender: false }, ${back});\n`;
   sfx += `      <audio id="sp${i}" src="assets/sfx/pop.mp3" data-start="${p.t}" data-duration="0.62" data-volume="0.7"></audio>\n`;
 });
 
@@ -144,7 +148,7 @@ const html = `<!doctype html>
       #title { background: #0C0C0C; padding: 16px 36px 22px; text-align: center;
         will-change: transform, opacity; box-shadow: 0 10px 34px rgba(0,0,0,.55); }
       .tl { font: 900 66px/1.04 "Mont", sans-serif; color: #fff; letter-spacing: .5px;
-        white-space: nowrap; text-shadow: none; }
+        white-space: nowrap; text-shadow: none; opacity: 0; will-change: transform, opacity; }
       .tl.l2 { color: #FFD700; }
       .group { position: absolute; left: 0; top: 1080px; width: 1080px; height: 460px;
         display: flex; align-items: center; justify-content: center; padding: 0 48px; }
