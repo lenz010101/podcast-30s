@@ -22,13 +22,16 @@ const vf = [
   "unsharp=5:5:0.7",
   "vignette=PI/3.8",
 ].join(",");
-execFileSync("ffmpeg", ["-y", "-ss", String(cfg.segStart), "-t", String(dur), "-i", SRC,
+// NOTA: -ss va DESPUES de -i (output-seek). El input-seek en este archivo roto
+// aterriza 1s tarde en contenido en el video (y escribe un elst con edit vacio
+// de 1s que congelaba el primer segundo). Output-seek = decode+drop exacto.
+execFileSync("ffmpeg", ["-y", "-i", SRC, "-ss", String(cfg.segStart), "-t", String(dur + 0.05),
   "-an", "-vf", vf, "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p",
   "assets\\vid\\seg.mp4"], { stdio: "ignore" });
 console.log("seg.mp4 ok");
 
-// 2) audio del segmento
-execFileSync("ffmpeg", ["-y", "-ss", String(cfg.segStart), "-t", String(dur), "-i", SRC,
+// 2) audio del segmento (output-seek tambien; verificado +-13ms vs input-seek)
+execFileSync("ffmpeg", ["-y", "-i", SRC, "-ss", String(cfg.segStart), "-t", String(dur),
   "-vn", "-c:a", "aac", "-b:a", "192k", "assets\\vo.m4a"], { stdio: "ignore" });
 console.log("vo.m4a ok");
 
